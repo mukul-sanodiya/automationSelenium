@@ -59,6 +59,8 @@ public class SeleniumHelper {
                 System.out.println("Second change for branch");
 
                 System.out.println("Third changes for same branch");
+
+                System.out.println("..................");
             }
             return false;
         }
