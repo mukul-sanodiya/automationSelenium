@@ -1,0 +1,23 @@
+<suite name="Parallel Suite" parallel="tests" thread-count="2">
+
+    <test name="LoginAppTest">
+        <classes>
+            <class name="stepDefinition.TestNGAnnotationsDemo">
+                <methods>
+                    <include name="loginApp"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Login2AppTest">
+        <classes>
+            <class name="stepDefinition.TestNGAnnotationsDemo">
+                <methods>
+                    <include name="login2App"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
