@@ -45,6 +45,12 @@ public class SeleniumHelper {
             for (RuleMatch match : matches) {
                 System.out.println("Error: " + match.getMessage());
                 System.out.println("Suggestions: " + match.getSuggestedReplacements());
+
+                System.out.println("Some Changes to push");
+
+                System.out.println("New line");
+
+
             }
             return false;
         }
