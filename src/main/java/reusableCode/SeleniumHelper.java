@@ -15,25 +15,28 @@ import java.util.List;
 public class SeleniumHelper {
     WebDriver driver;
     WebDriverWait wait;
-    int EXPLICIT_WAIT= FileReaderManager.getConfigFileReader().getExplicitWait();
+    int EXPLICIT_WAIT = FileReaderManager.getConfigFileReader().getExplicitWait();
 
     private static JLanguageTool tool = new JLanguageTool(new BritishEnglish());
 
-    public SeleniumHelper(WebDriver driver){
-        this.driver=driver;
+    public SeleniumHelper(WebDriver driver) {
+        this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
     }
 
-    public void elementToVisibility(By loc){
+    public void elementToVisibility(By loc) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(loc));
     }
-    public void elementToClickable(By loc){
+
+    public void elementToClickable(By loc) {
         wait.until(ExpectedConditions.elementToBeClickable(loc));
     }
-    public void enterText(By loc, String text){
+
+    public void enterText(By loc, String text) {
         driver.findElement(loc).sendKeys(text);
     }
-    public void click(By loc){
+
+    public void click(By loc) {
         driver.findElement(loc).click();
     }
 
@@ -52,11 +55,14 @@ public class SeleniumHelper {
 
 
                 System.out.println("Branch first");
+
+                System.out.println("Second change for branch");
+
+                System.out.println("Third changes for same branch");
             }
             return false;
-            
         }
-        return true;
-    }
+            return true;
+        }
 
 }
