@@ -54,6 +54,7 @@ public class SeleniumHelper {
                 System.out.println("Branch first");
             }
             return false;
+            
         }
         return true;
     }
